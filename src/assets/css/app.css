@@ -1,0 +1,4 @@
+@import "./core-settings.scss";
+@import "./components/_zoom-in.css";
+@import "./components/_nav.scss";
+@import "./components/_tab.scss";
