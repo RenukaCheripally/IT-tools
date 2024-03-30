@@ -2,7 +2,7 @@
   @apply z-50;
 
   .desktop-nav {
-    @apply flex items-center justify-between p-6 lg:px-4;
+    @apply flex items-center justify-between py-6;
 
     .nav-item {
       @apply text-sm font-semibold leading-6 text-white;

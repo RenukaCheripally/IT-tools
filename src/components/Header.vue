@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
+import MenuSVG from "../assets/images/menu.svg?component";
+import HomeSVG from "../assets/images/home.svg?component";
+import Lucide from "../base-components/Lucide";
 
 const isMenuOpen = ref(false);
 
@@ -14,19 +17,27 @@ const toggleMenu = () => {
 <template>
   <header class="nav">
     <nav class="desktop-nav" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <RouterLink :to="{name: 'home', params: {country: ''}}" class="-m-1.5 p-1.5">
-          <span class="sr-only">Company</span>
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=500" alt="" />
+      <div class="flex lg:flex-1 gap-2">
+        <RouterLink :to="{name: 'home', params: {country: ''}}" class="p-1.5  w-9">
+          <MenuSVG alt="Menu" class="menu text-white" />
+        </RouterLink>
+        <RouterLink :to="{name: 'home', params: {country: ''}}" class="p-1.5  w-9">
+          <HomeSVG alt="Menu" class="menu text-white" />
         </RouterLink>
       </div>
-
-      <div class="flex">
-        <button @click.prevent="toggleMenu()" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
-          <span class="sr-only">Open main menu</span>
-          <svg class="stroke-[1.3] w-8 h-8 text-white transform -rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg>
-        </button>
-      </div>
+      <div class="relative hidden sm:block">
+          <FormInput
+            type="text"
+            class="border-transparent w-56 shadow-none rounded-full bg-slate-200 pr-8 transition-[width] duration-300 ease-in-out focus:border-transparent focus:w-72 dark:bg-darkmode-400"
+            placeholder="Search..."
+            @focus="showSearchDropdown"
+            @blur="hideSearchDropdown"
+          />
+          <Lucide
+            icon="Search"
+            class="absolute inset-y-0 right-0 w-5 h-5 my-auto mr-3 text-slate-600 dark:text-slate-500"
+          />
+        </div>
 
     </nav>
 
