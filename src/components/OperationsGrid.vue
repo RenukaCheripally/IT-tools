@@ -1,5 +1,8 @@
 <script setup>
-import { ref, reactive, onMounted, watch } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
+import JSONDiffSVG from "../assets/images/tools/json-diff.svg?component";
+import LikeSVG from "../assets/images/like.svg?component";
+
 const message = ref('Hello world');
 
 
@@ -33,11 +36,29 @@ const data = reactive({
       "name": "Decrypting Data",
       "description": "Decrypting previously encrypted data, securely managing and handling decryption keys, and following best practices for data access, storage, and removal."
     }
-]
+  ]
 })
 
 </script>
 
 <template>
-  {{ message }}
+  <ul>
+    <li v-for="op in data?.operations">
+      <div class="card">
+        <div class="icons">
+          <RouterLink :to="{ name: 'home', params: { country: '' } }" class="p-1.5  w-9">
+            <JSONDiffSVG alt="Menu" class="w-9 menu text-white" />
+            <LikeSVG alt="Menu" class="w-6 menu text-white" />
+          </RouterLink>
+          <!-- svg -->
+        </div>
+        <div>
+          {{ op.name }}
+        </div>
+        <div>
+          {{ op.description }}
+        </div>
+      </div>
+    </li>
+  </ul>
 </template>

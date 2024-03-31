@@ -1,0 +1,39 @@
+[
+  {
+    "name": "JSON diff",
+    "key": "json-diff"
+  },
+  {
+    "name": "HTTP Status codes"
+  },
+  {
+    "name": "Hash text"
+  },
+  {
+    "name": "QR code generator"
+  },
+  {
+    "name": "SVG placeholder generator"
+  },
+  {
+    "name": "JSON to CSV"
+  },
+  {
+    "name": "Docker run to Docker compose converter"
+  },
+  {
+    "name": "Text diff"
+  },
+  {
+    "name": "Temperature converter"
+  },
+  {
+    "name": "Text statistics"
+  },
+  {
+    "name": "ASCII Art Text Generator"
+  },
+  {
+    "name": "Phone parser and formatter"
+  }
+]
