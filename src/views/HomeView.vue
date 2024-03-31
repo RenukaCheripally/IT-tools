@@ -1,5 +1,6 @@
 <script setup>
 import OperationsGrid from "@/components/OperationsGrid.vue";
+import tools from "../assets/data/tools.json"
 
 const title = "All the tools";
 
@@ -7,7 +8,7 @@ const title = "All the tools";
 
 <template>
   <main>
-    {{ title }}
-    <OperationsGrid />
+    <div class="text-white mb-2 text-lg">{{ title }}</div>
+    <OperationsGrid :tools="tools"/>
   </main>
 </template>

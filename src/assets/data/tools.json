@@ -1,16 +1,23 @@
 [
   {
     "name": "JSON diff",
-    "key": "json-diff"
+    "key": "json-diff",
+    "description": "Compare two JSON objects and get the differences between them."
   },
   {
-    "name": "HTTP Status codes"
+    "name": "HTTP Status codes",
+    "key": "http-codes",
+    "description" : "The list of all HTTP status codes their name and their meaning."
   },
   {
-    "name": "Hash text"
+    "name": "Hash text",
+    "description": "Hash a text string using the function you need : MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 or RIPEMD160",
+    "key":"hash-text"
   },
   {
-    "name": "QR code generator"
+    "name": "QR code generator",
+    "description": "Generate and download QR-code for an url or just a text and customize the background and foreground colors.",
+    "key": "qr-code-generator"
   },
   {
     "name": "SVG placeholder generator"

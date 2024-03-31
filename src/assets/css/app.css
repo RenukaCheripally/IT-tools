@@ -3,3 +3,4 @@
 @import "./components/_nav.scss";
 @import "./components/_tab.scss";
 @import "./components/_card.scss";
+@import "./components/operations-grid.scss";
