@@ -2,6 +2,7 @@
 import { ref, reactive, onMounted, defineProps } from 'vue';
 import JSONDiffSVG from "../assets/images/tools/json-diff.svg?component";
 import LikeSVG from "../assets/images/like.svg?component";
+import utils from '../utils/index';
 
 const props = defineProps({
   tools: {
@@ -27,17 +28,19 @@ const data = reactive({
 
 <template>
   <ul class="operations-grid">
+    <!-- TODO: Add box shadow to card -->
     <li v-for="tool in props?.tools" class="card">
       <div class="icons">
-        <JSONDiffSVG alt="Menu" class="w-9 menu text-white" />
-        <LikeSVG alt="Menu" class="w-6 menu text-white" />
-        <!-- svg -->
+        <!-- TODO: Use different icons for each card based on the key mentioned in tools.json file -->
+        <JSONDiffSVG alt="Menu" class="w-9 menu" />
+        <LikeSVG alt="Menu" class="w-6 menu" />
       </div>
       <div class="name">
         {{ tool.name }}
       </div>
       <div class="description">
-        {{ tool.description }}
+        <!-- TODO: Use CSS to trim for better experience -->
+        {{ utils.trim(tool.description) }}
       </div>
     </li>
   </ul>

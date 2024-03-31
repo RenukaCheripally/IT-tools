@@ -6,10 +6,16 @@
   border: 1px solid var(--border-color);
   border-radius: 4px;
   padding: 1em 1.2em;
+  transition: transform 0.3s ease-in;
 
   &:hover {
     border-color: rgb(30 165 76 / 1);
+    transform: scale(1.01);
     cursor: pointer;
+
+    .icons {
+      color: white;
+    }
   }
 
   .icons {
