@@ -1,43 +1,47 @@
 <script setup>
-import { ref, reactive, onMounted, watch } from 'vue';
-const message = ref('Hello world');
+import { ref, reactive, onMounted, defineProps } from 'vue';
+import JSONDiffSVG from "../assets/images/tools/json-diff.svg?component";
+import LikeSVG from "../assets/images/like.svg?component";
+import utils from '../utils/index';
+
+const props = defineProps({
+  tools: {
+    type: Object,
+    required: true,
+    default: [],
+  },
+});
 
 
 // This simulates the onCreated behavior
 const initComponent = () => {
-  message.value = 'Hello, World!'
 }
 
 // Initialize when the component is mounted
 onMounted(() => initComponent())
 
 const data = reactive({
-  operations: [
-    {
-      "name": "JSON to CSV",
-      "description": "Parsing JSON and converting data to CSV format, ensuring that the correct data is extracted and formatted to suit CSV standards and specifications."
-    },
-    {
-      "name": "CSV to JSON",
-      "description": "Parsing and converting CSV data to JSON format, using appropriate techniques for delimiters, quote characters, and escape sequences."
-    },
-    {
-      "name": "SQL to CSV",
-      "description": "Exporting SQL data to CSV format, selecting appropriate data fields, handling SQL queries, and managing the export of large data sets."
-    },
-    {
-      "name": "Encrypting Data",
-      "description": "Encrypting structured or unstructured data using preferred encryption algorithms and protocols, such as AES, RSA, or PGP, and managing encryption keys securely."
-    },
-    {
-      "name": "Decrypting Data",
-      "description": "Decrypting previously encrypted data, securely managing and handling decryption keys, and following best practices for data access, storage, and removal."
-    }
-]
+
 })
 
 </script>
 
 <template>
-  {{ message }}
+  <ul class="operations-grid">
+    <!-- TODO: Add box shadow to card -->
+    <li v-for="tool in props?.tools" class="card">
+      <div class="icons">
+        <!-- TODO: Use different icons for each card based on the key mentioned in tools.json file -->
+        <JSONDiffSVG alt="Menu" class="w-9 menu" />
+        <LikeSVG alt="Menu" class="w-6 menu" />
+      </div>
+      <div class="name">
+        {{ tool.name }}
+      </div>
+      <div class="description">
+        <!-- TODO: Use CSS to trim for better experience -->
+        {{ utils.trim(tool.description) }}
+      </div>
+    </li>
+  </ul>
 </template>

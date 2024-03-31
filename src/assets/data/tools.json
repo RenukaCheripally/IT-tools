@@ -1,0 +1,72 @@
+[
+  {
+    "name": "JSON diff",
+    "key": "json-diff",
+    "description": "Compare two JSON objects and get the differences between them."
+  },
+  {
+    "name": "HTTP Status codes",
+    "key": "http-codes",
+    "description" : "The list of all HTTP status codes their name and their meaning."
+  },
+  {
+    "name": "Hash text",
+    "description": "Hash a text string using the function you need : MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 or RIPEMD160",
+    "key":"hash-text"
+  },
+  {
+    "name": "QR code generator",
+    "description": "Generate and download QR-code for an url or just a text and customize the background and foreground colors.",
+    "key": "qr-code-generator"
+  },
+  {
+    "name": "SVG placeholder generator",
+    "description": "Generate svg images to use as placeholder in your applications.",
+    "key": "svg-placeholder-generator"
+  },
+  {
+    "name": "JSON to CSV",
+    "description": "Convert JSON to CSV with automatic header detection.",
+    "key": "json2csv"
+  },
+  {
+    "name": "Docker run to Docker compose converter",
+    "description": "Turns docker run commands into docker-compose files!",
+    "key":  "docker-run-to-compose"
+  },
+  {
+    "name": "Text diff",
+    "description": "Compare two texts and see the differences between them.",
+    "key":  "text-diff"
+  },
+  {
+    "name": "Temperature converter",
+    "description": "Temperature degrees conversions for Kelvin, Celsius, Fahrenheit, Rankine, Delisle, Newton, Réaumur and Rømer.",
+    "key": "temperature-converter"
+  },
+  {
+    "name": "Text statistics",
+    "description": "Get information about a text, the amount of characters, the amount of words, it's size,  etc...",
+    "key": "text-stats"
+  },
+  {
+    "name": "ASCII Art Text Generator",
+    "description": "Create ASCII art text with many fonts and styles.",
+    "key": "ascii-art"
+  },
+  {
+    "name": "Phone parser and formatter",
+    "description": "Parse, validate and format phone numbers. Get information about the phone number, like the country code, type, etc.",
+    "key": "phone-parser"
+  },
+  {
+    "name": "JSON prettify and format",
+    "description": "Prettify your JSON string to a human friendly readable format.",
+    "key": "json-prettify"
+  },
+  {
+    "name": "JSON minify",
+    "description": "Minify and compress your JSON by removing unnecessary white spaces.",
+    "key": "json-minify"
+  }
+]
