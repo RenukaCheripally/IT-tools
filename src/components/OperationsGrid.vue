@@ -24,6 +24,10 @@ const data = reactive({
 
 })
 
+function getImgSrc(tool) {
+  return `src/assets/images/tools/${tool.key}.svg`;
+}
+
 </script>
 
 <template>
@@ -31,8 +35,7 @@ const data = reactive({
     <!-- TODO: Add box shadow to card -->
     <li v-for="tool in props?.tools" class="card">
       <div class="icons">
-        <!-- TODO: Use different icons for each card based on the key mentioned in tools.json file -->
-        <JSONDiffSVG alt="Menu" class="w-9 menu" />
+        <img v-if="getImgSrc(tool)!= null" :src="getImgSrc(tool)" class="w-6">
         <LikeSVG alt="Menu" class="w-6 menu" />
       </div>
       <div class="name">
