@@ -1,5 +1,4 @@
 # IT Tools - Vite, Pinia, Vue Router & Tailwind CSS
-
 A Vue app that provides as many IT tools and resources as possible.
 
 ## Dependencies 
