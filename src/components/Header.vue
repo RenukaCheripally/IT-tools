@@ -5,6 +5,7 @@ import MenuSVG from "../assets/images/menu.svg?component";
 import HomeSVG from "../assets/images/home.svg?component";
 import Lucide from "../base-components/Lucide";
 import { FormInput } from "../base-components/Form";
+import Button from "../base-components/Button";
 import _ from "lodash";
 
 const isMenuOpen = ref(false);
@@ -28,7 +29,13 @@ const toggleMenu = () => {
         </RouterLink>
       </div>
 
+      <div>
+        <Button variant="primary" class="">
+          Fun Quote <Lucide icon="Heart" class="w-5 ml-1" />
+        </Button>
+      </div>
+
     </nav>
-    
+
   </header>
 </template>
