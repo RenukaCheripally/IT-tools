@@ -1,20 +1,11 @@
 <script setup>
-import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import MenuSVG from "../assets/images/menu.svg?component";
 import HomeSVG from "../assets/images/home.svg?component";
 import Lucide from "../base-components/Lucide";
-import { FormInput } from "../base-components/Form";
 import Button from "../base-components/Button";
 import _ from "lodash";
 
-const isMenuOpen = ref(false);
-
-const menuItems = [];
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
 </script>
 
 <template>
